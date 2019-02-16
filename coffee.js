@@ -12,11 +12,14 @@ function Coffee(roast, ounces) {
             return "large";
         }
     }
-    this.toString = function() {
-        return "You’ve ordered a " + this.getSize + " "+this.roast + "coffee."
+    this.toString = function () {
+        return "You’ve ordered a " + this.getSize() + " " + this.roast + " coffee."
 
     }
-}   
-var houseBlend = new Coffee("House Blend", 12); console.log(houseBlend.toString());
-var darkRoast = new Coffee("Dark Roast", 16); console.log(darkRoast.toString());
-var oneShot = new Coffee("One Shot", 8); console.log(oneShot.toString());
+}
+var houseBlend = new Coffee("House Blend", 12); 
+console.log(houseBlend.toString());
+var darkRoast = new Coffee("Dark Roast", 16); 
+console.log(darkRoast.toString());
+var oneShot = new Coffee("One Shot", 8); 
+console.log(oneShot.toString());
