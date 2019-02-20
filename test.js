@@ -1,18 +1,19 @@
-function Dog(name, breed, weight) {
-    this.name = name;
-    this.breed = breed;
-    this.weight = weight;
-}
-var fido = new Dog("Fido", "Mixed", 38);
-var fluffy = new Dog("Fluffy", "Poodle", 30);
-var spot = new Dog("Spot", "Chihuahua", 10);
-var dogs = [fido, fluffy, spot];
-for (var i = 0; i < dogs.length; i++) {
-    var size = "small";
-    if (dogs[i].weight > 10) {
-        size = "large";
+String.prototype.cliche = function () {
+    var cliche = ["lock and load", "touch base", "open the kimono"];
+    for (var i = 0; i < cliche.length; i++) {
+        var index = this.indexOf(cliche[i]);
+        if (index >= 0) {
+            return true;
+        }
     }
-    console.log("Dog: " + dogs[i].name
-        + " is a " + size
-        + " " + dogs[i].breed);
+    return false;
+};
+var sentences = ["I'll send my car around to pick you up.",
+    "Let's touch base in the morning and see where we are",
+    "We don't want to open the kimono, we just want to inform them."];
+for (var i = 0; i < sentences.length; i++) {
+    var phrase = sentences[i];
+    if (phrase.cliche()) {
+        console.log("CLICHE ALERT: " + phrase);
+    }
 }
